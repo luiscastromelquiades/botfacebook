@@ -1,0 +1,218 @@
+[
+  {
+    "title" : "Mensaje de bienvenida",
+    "content" : "Hola {first_name}, me complace anunciarte que hemos registrado tus datos correctamente",
+    "context" : "welcome",
+    "type" : "common",
+    "order" : 1,
+    "format" : true,
+    "type_message" : "text_message"
+  },
+  {
+    "title" : "obtener preferencias",
+    "content" : "De que te gustaria hablar?",
+    "context" : "welcome",
+    "type" : "common",
+    "order" : 2,
+    "identifier" : "set_preference",
+    "type_message" : "quick_replies",
+    "replies" : [
+      {
+        "title" : "Clima",
+        "payload" : "CLIMA"
+      },
+      {
+        "title" : "Nada",
+        "payload" : "NADA"
+      },
+      {
+        "title" : "Productos",
+        "payload" : "PRODUCTOS"
+      },
+      {
+        "title" : "Sugerencias",
+        "payload" : "SUGERENCIAS"
+      }
+    ]
+  },
+  {
+    "title" : "CLIMA",
+    "content" : "Hablemos del clima entonces",
+    "type" : "quick_replies",
+    "context" : "CLIMA",
+    "order" : 1,
+    "type_message" : "text_message"
+  },
+  {
+    "title" : "CLIMA",
+    "content" : "¿Deseas proporcionar tu ubicación para darte el clima?",
+    "type" : "quick_replies",
+    "context" : "CLIMA",
+    "order" : 2,
+    "type_message" : "quick_replie_location"
+  },
+  {
+    "title" : "Informacion del clima",
+    "content" : "Actualmente {city} se encuentra a {temperature} grados",
+    "context" : "temperature",
+    "type" : "specific",
+    "order" : 1,
+    "format" : true,
+    "data_model" : true,
+    "type_message" : "text_message"
+  },
+  {
+    "title" : "Clima completado",
+    "content" : "Ya te la youknow con el clima :D",
+    "type" : "Done",
+    "context" : "location",
+    "order" : 1,
+    "type_message" : "text_message"
+  },
+  {
+    "title" : "Ayuda",
+    "content" : "Si necesitas contactar con el desarrollador escribe 'contacto con desarrollador'",
+    "type" : "help",
+    "context" : "help",
+    "order" : 1,
+    "type_message" : "text_message"
+  },
+  {
+    "title" : "Contacto con el desarrollador",
+    "content" : "Contacto",
+    "type" : "develop",
+    "context" : "develop",
+    "order" : 1,
+    "type_message" : "template",
+    "template_type" : "generic",
+    "elements" :
+    [
+      {
+        "title" : "Luis Castro",
+        "subtitle": "Redes sociales",
+        "item_url" : "https://codigofacilito.com/usuarios/89857",
+        "image_url" : "https://graph.facebook.com/100000840994980/picture?type=large",
+        "buttons" : [
+          {
+            "type" : "web_url",
+            "url" : "https://www.facebook.com/luis.enrique.bot",
+            "title" : "Facebook"
+          },
+          {
+            "type" : "postback",
+            "payload" : "PRUEBA",
+            "title" : "Botón de prueba"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title" : "Contacto con el desarrollador",
+    "content" : "Contacto",
+    "type" : "develop",
+    "context" : "develop",
+    "order" : 2,
+    "type_message" : "template",
+    "template_type" : "generic",
+    "elements" :
+    [
+      {
+        "title" : "Luis Castro",
+        "subtitle": "Redes sociales",
+        "item_url" : "https://codigofacilito.com/usuarios/89857",
+        "image_url" : "https://graph.facebook.com/100000840994980/picture?type=large",
+        "buttons" : [
+          {
+            "type" : "web_url",
+            "url" : "https://www.facebook.com/luis.enrique.bot",
+            "title" : "Facebook"
+          },
+          {
+            "type" : "postback",
+            "payload" : "PRUEBA",
+            "title" : "Botón de prueba"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title" : "Ayuda",
+    "content" : "No dudes en contactar 🔥",
+    "type" : "develop",
+    "context" : "develop",
+    "order" : 1,
+    "type_message" : "text_message"
+  },
+  {
+    "title" : "Mensaje no encontrado",
+    "content" : "No puedo encontrar respuesta a lo que dices",
+    "type" : "not_found",
+    "context" : "not_found",
+    "order" : 1,
+    "type_message" : "text_message"
+  },
+  {
+    "title" : "Regreso",
+    "content" : "Hola { first_name } es bueno tenerte de regreso :D",
+    "type" : "specific",
+    "context" : "return_user",
+    "order" : 1,
+    "format" : true,
+    "type_message" : "text_message"
+  },
+  {
+    "title" : "Mensaje no encontrado",
+    "content" : "Recuerda que siempre podras hablar conmigo!",
+    "type" : "reminder",
+    "context" : "reminder",
+    "order" : 1,
+    "type_message" : "text_message"
+  },
+  {
+    "title" : "Postback",
+    "content" : "Ahora ya se manejar los eventos postback",
+    "type" : "postback",
+    "context" : "PRUEBA",
+    "order" : 1,
+    "format" : true,
+    "type_message" : "text_message"
+  },
+  {
+    "title" : "Imagen random",
+    "content" : "",
+    "type" : "image",
+    "context" : "common",
+    "order" : 1,
+    "url": "http://i.imgur.com/Q3MKjy7.jpg",
+    "type_message" : "image"
+  },
+  {
+    "title" : "Video random",
+    "content" : "",
+    "type" : "video",
+    "context" : "common",
+    "order" : 1,
+    "url": "https://static.videezy.com/system/resources/previews/000/005/529/original/Reaviling_Sjusj%C3%B8en_Ski_Senter.mp4",
+    "type_message" : "video"
+  },
+  {
+    "title" : "Audio random",
+    "content" : "",
+    "type" : "audio",
+    "context" : "common",
+    "order" : 1,
+    "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    "type_message" : "audio"
+  },
+  {
+    "title" : "Archivo random",
+    "content" : "",
+    "type" : "file",
+    "context" : "common",
+    "order" : 1,
+    "url": "https://www.colmex.mx/assets/pdfs/3-PIDESC_50.pdf",
+    "type_message" : "file"
+  }
+]

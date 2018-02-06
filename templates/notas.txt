@@ -1,0 +1,1 @@
+sin un servidor los service workers, las rutas no sirven
